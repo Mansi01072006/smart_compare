@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartCompare - Best Deals Finder</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-search-dollar"></i>
+                <span>SmartCompare</span>
+            </div>
+            <nav class="nav">
+                <a href="#home">Home</a>
+                <a href="#trending">Trending</a>
+                <a href="#about">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Find the Best Deals Across All Platforms</h1>
+                <p>Compare prices, ratings, and quality from Amazon, Flipkart, Myntra, and more. Save money and make smart buying decisions.</p>
+                
+                <div class="search-container">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="searchInput" placeholder="Search for products (e.g., iPhone, Nike shoes, MacBook)">
+                        <button id="searchBtn" onclick="searchProduct()">
+                            <span class="btn-text">Search</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                    <div class="search-suggestions" id="suggestions"></div>
+                </div>
+
+                <div class="stats">
+                    <div class="stat">
+                        <span class="stat-number">10M+</span>
+                        <span class="stat-label">Products</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Platforms</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">₹2Cr+</span>
+                        <span class="stat-label">Saved</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loading -->
+    <div class="loading" id="loading">
+        <div class="loading-spinner"></div>
+        <p>Searching across platforms...</p>
+    </div>
+
+    <!-- Results Section -->
+    <section class="results" id="results" style="display: none;">
+        <div class="container">
+            <div class="results-header">
+                <h2 id="resultsTitle">Search Results</h2>
+                <div class="results-count" id="resultsCount"></div>
+            </div>
+            
+            <div id="resultsContainer"></div>
+        </div>
+    </section>
+
+    <!-- Trending Section -->
+    <section class="trending" id="trending">
+        <div class="container">
+            <h2>Trending Products</h2>
+            <div class="trending-grid" id="trendingGrid">
+                <!-- Trending products will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2>Why Choose SmartCompare?</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Price Comparison</h3>
+                    <p>Compare prices across 50+ platforms instantly</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-star"></i>
+                    <h3>Quality Analysis</h3>
+                    <p>Get quality scores based on reviews and ratings</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-trophy"></i>
+                    <h3>Best Value</h3>
+                    <p>Find the perfect balance of price and quality</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-shipping-fast"></i>
+                    <h3>Delivery Info</h3>
+                    <p>Compare delivery times and shipping costs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-search-dollar"></i>
+                        <span>SmartCompare</span>
+                    </div>
+                    <p>Your smart shopping companion</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Platforms</h4>
+                    <ul>
+                        <li>Amazon</li>
+                        <li>Flipkart</li>
+                        <li>Myntra</li>
+                        <li>Croma</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li>Electronics</li>
+                        <li>Fashion</li>
+                        <li>Home & Garden</li>
+                        <li>Sports</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SmartCompare. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
